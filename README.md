@@ -24,7 +24,7 @@ useful to use it in a standard _Makefile_. _aspell_ is an optional package
 for spelling checks.
 
 
-# Soure tex structure (`src`):
+# Source tex structure (`src`):
 
 The main document where the most important variables or macros are defined 
 is _pfc.tex_. The style, dependencies and other macros are defined in _pfc.sty_, 
