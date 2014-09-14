@@ -1,0 +1,111 @@
+% PFC: PhotoPlace
+% (c) Jose Riguera Lopez 2013
+
+% Opciones:
+%       a4paper -> indica el tamaño del papel, en este caso A4.
+%       11pt    -> tamaño de la fuente 11 puntos.
+%       twoside -> doble cara.
+%       oneside -> una cara del folio.
+%
+\documentclass[a4paper,11pt,twoside]{book}
+%% Estilo PFC UDC
+\usepackage{pfc}
+%% Macros
+\newcommand{\curso}{Ingeniería en Informática}
+\newcommand{\proyecto}{Proyecto Fin de Carrera}
+\newcommand{\universidad}{Universidad de A Coruña}
+\newcommand{\centro}{Facultad de Informática}
+\newcommand{\unicentro}{\centro de la \universidad}
+\newcommand{\proyectotipo}{Proyecto clásico de ingeniería}
+\newcommand{\titulo}{Cómo el pollo cruzó la carretera}
+\newcommand{\titulogalego}{Título longo do proxecto}
+\newcommand{\tituloenglish}{Long title of the proyect}
+\newcommand{\corto}{Título corto}
+\newcommand{\autor}{Dolores Fuertes de Barriga}
+\newcommand{\director}{Armando Bronca Segura}
+\newcommand{\tutor}{Alex Plosivo Seguro}
+\newcommand{\departamento}{Departamento de asuntos humorísticos}
+\newcommand{\software}{PhotoPlace}
+\newcommand{\palabras}{lista, palabras, clave}
+
+\title{\titulo}
+\author{\autor}
+\date{\today}
+
+\hypersetup{
+%   bookmarks=true,         % barra de marcadores
+    unicode=false,          % caracteres non-Latin en marcadores de Acrobat
+    pdftoolbar=true,        % mostrar barra de herramientas de Acrobat
+    pdfmenubar=true,        % mostrar menú de Acrobat
+    pdffitwindow=false,     % ajustar ventana al ancho de página
+    pdfstartview={FitH},    % ajustar documento al ancho de página
+    pdftitle={\corto},      % título
+    pdfauthor={\autor},     % autor
+    pdfsubject={\titulo},   % tema del documento
+    pdfcreator={LaTex},     % generador del documento
+    pdfproducer={\autor},   % productor del documento
+    pdfkeywords={\palabras},% lista de palabras clave
+    pdfnewwindow=true,      % enlaces en una nueva ventana
+    colorlinks=true,        % false: enlaces en caja; true: enlaces coloreados
+    linkcolor=black,        % color de enlaces internos
+    citecolor=green,        % color de enlaces a bibliografía
+    filecolor=magenta,      % color de enlaces a ficheros
+    urlcolor=blue           % color de enlaces externos
+}
+
+\loadglsentries{pfc.glossary}
+\makeglossaries
+
+\begin{document}
+  \graphicspath{{./images/}}
+  % pageblank genera una pagina en blanco, para imprimir en formato libro
+  \include{pfc_portada}
+  \pageblank
+  \include{pfc_certificado}
+  \pageblank
+  \include{pfc_nota}
+  \pageblank
+  \include{pfc_resumen}
+  \pageblank
+  \include{pfc_palabras_clave}
+  \pageblank
+  \include{pfc_dedicatoria}
+  \pageblank
+  \include{pfc_agradecimientos}
+  \pageblank
+  
+  % FRONTMATTER: TOC, LOF, LOT
+  \frontmatter
+  \dominitoc[n]     % removes the title "contents"
+  \nomtcrule        % removes rules = horizontal lines
+  \tableofcontents
+  %\addcontentsline{toc}{chapter}{Contents}
+  \listoffigures
+  %\addcontentsline{toc}{chapter}{List of Figures}
+  %\listoftables
+  %\addcontentsline{toc}{chapter}{List of Tables}
+
+  % MAINMATTER: content
+  \mainmatter
+  \include{introduccion}
+  \include{conceptos}
+  \include{plan}
+  \include{tecnologia}
+  \include{disenho}
+  \include{implementacion}
+  \include{conclusiones}
+  
+  \appendix
+  \include{apendice}
+  % Glossary
+  \printglossary[title=Glosario,toctitle=Glosario]
+  \printglossary[type=\acronymtype,title=Acrónimos,toctitle=Acrónimos]
+  % Bibliography
+  \nocite{*}    % incluir referencias no citadas.
+  %\bibliographystyle{plainnat}
+  %\bibliographystyle{unsrtnat}
+  \bibliographystyle{dcu}  % Books and web
+  \bibliography{pfc}
+  
+  \include{pfc_licencia}
+\end{document}

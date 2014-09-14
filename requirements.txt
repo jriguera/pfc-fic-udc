@@ -1,0 +1,9 @@
+texlive
+texlive-latex-extra
+texlive-extra-utils
+texlive-latex-recommended
+texlive-bibtex-extra
+texlive-science
+texlive-pictures
+texlive-lang-spanish
+latexmk

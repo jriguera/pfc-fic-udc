@@ -1,0 +1,182 @@
+\ProvidesPackage{pfc}
+\typeout{Estilo Proyecto Fin de Carrera}
+
+% Codificación utf8x y símbolos del idioma español (ñ, acentos, ...)
+% El documento será necesario editarlo en utf-8
+\usepackage[spanish]{babel}
+\usepackage[utf8x]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{morefloats}
+\usepackage{float}
+\usepackage{eurosym}
+\usepackage{fancybox}
+\usepackage{multicol}
+\usepackage{amsmath}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{ifpdf}
+\ifpdf
+    % pdflatex
+    % Para incluir gráficos en JPG => compilar con pdflatex.
+    \usepackage[pdftex]{graphicx}
+    % Para escribir en color...
+    \usepackage[pdftex,usenames,dvipsnames]{color}
+\else
+    % latex
+    % Para incluir gráficos EPS => compilar con latex.
+    \usepackage[dvips]{graphicx}
+    % Para escribir en color...
+    \usepackage[dvips,usenames]{color}
+\fi
+%\usepackage{biblatex}
+\usepackage[pagebackref=true]{hyperref}
+%\usepackage[colorlinks,bookmarks=false]{hyperref}
+
+% Configuración de márgenes
+\usepackage{setspace}
+%\doublespacing
+\onehalfspacing
+\setlength\textwidth{15cm}
+\setlength\textheight{22cm}
+\setlength\oddsidemargin{1cm}
+\setlength\evensidemargin{0cm}
+% La separación entre párrafos...
+\parskip=6pt
+% Identado en la primera línea del nuevo párrafo...
+\parindent=10pt
+% Número máximo de niveles de profundidad en las secciones.
+\setcounter{secnumdepth}{3}
+% Establecer el margen superior para los capitulos
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-40pt}{0pt}
+\footskip = 35pt
+
+% Cabecera y pie de páginas.
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\chaptermark}[1]{ \markboth{ \chaptername\ \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{ \markright{ \thesection.\ #1}}
+\fancyhead[LE]{ \textsf{\leftmark} }
+\fancyhead[RO]{ \textsf{\rightmark} }
+\fancyfoot[RE,LO]{ \scriptsize \textrm{\corto}}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.1pt}
+\fancypagestyle{plain}{
+  \fancyhf{} % remove everything
+  \renewcommand{\headrulewidth}{0pt} % remove lines as well
+  \renewcommand{\footrulewidth}{0pt}
+}
+% Code for creating empty pages
+% No headers on empty pages before new chapter
+\makeatletter
+\def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
+    \hbox{}
+    \thispagestyle{plain}
+    \newpage
+    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+\makeatother \clearpage{\pagestyle{plain}\cleardoublepage}
+% Para evitar lineas huérfanas
+\widowpenalty=10000
+\clubpenalty=10000
+
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+% \definecolor{mygreen}{rgb}{0,0.6,0}
+% \definecolor{mygray}{rgb}{0.5,0.5,0.5}
+% \definecolor{mymauve}{rgb}{0.58,0,0.82}
+% \lstset{ %
+%   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+%   basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+%   breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+%   breaklines=true,                 % sets automatic line breaking
+%   captionpos=b,                    % sets the caption-position to bottom
+%   commentstyle=\color{mygreen},    % comment style
+%   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+%   frame=single,                    % adds a frame around the code
+%   keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+%   keywordstyle=\color{blue},       % keyword style
+%   language=Octave,                 % the language of the code
+%   morekeywords={*,...},            % if you want to add more keywords to the set
+%   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+%   numbersep=5pt,                   % how far the line-numbers are from the code
+%   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+%   rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+%   showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+%   showstringspaces=false,          % underline spaces within strings only
+%   showtabs=false,                  % show tabs within strings adding particular underscores
+%   stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+%   stringstyle=\color{mymauve},     % string literal style
+%   tabsize=2,                       % sets default tabsize to 2 spaces
+%   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+% }
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\renewcommand{\lstlistingname}{Listado}
+\lstset{%
+  % General design
+  backgroundcolor=\color{gray97},
+  basicstyle={\tiny\ttfamily},
+  frame=l,
+  % Code design
+  identifierstyle=\color{black},
+  keywordstyle=\color{blue}\bfseries,
+  %ndkeywordstyle=\color{greenCode}\bfseries,
+  stringstyle=\color{OliveGreen}\ttfamily,
+  commentstyle=\color{gray45}\ttfamily,
+  % Code
+  tabsize=2,
+  showtabs=false,
+  showspaces=false,
+  showstringspaces=false,
+  extendedchars=true,
+  breaklines=true,
+  captionpos=b,
+  % line-numbers
+  xleftmargin={0.75cm},
+  numbers=left,
+  stepnumber=1,
+  firstnumber=1,
+  numberfirstline=true,
+}
+\lstdefinestyle{term}{
+  basicstyle=\scriptsize\bf\ttfamily,
+  backgroundcolor=\color{gray75},
+}
+% Minimizar fragmentado de listados
+\lstnewenvironment{listing}[1][]{
+  \lstset{#1}\pagebreak[0]}{\pagebreak[0]
+}
+
+% Para los directorios
+\usepackage{dirtree}
+
+% Para los algoritmos
+%\usepackage[]{algorithm2e}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
+
+\usepackage{url}
+
+\usepackage{minitoc}
+\setcounter{minitocdepth}{3}
+\usepackage{etoolbox}
+
+% Glosario
+\usepackage[nopostdot,acronym,toc,footnote]{glossaries}
+
+% Bibliografia
+\usepackage[round]{natbib}
+\usepackage{ragged2e}
+\renewcommand{\harvardurl}[1]{\mbox{\url{#1}}}
+%\renewcommand\url{\hfil\penalty 100 \hfilneg \hbox}
+
+% Crear página en blanco
+\newcommand{\pageblank}{\newpage \thispagestyle{empty}\mbox{}} 

@@ -1,0 +1,122 @@
+%
+% Acrónimos y Glosario
+%
+
+\newacronym{GIS}{GIS}{Geographic Information Systems}
+\newacronym[\glsshortpluralkey=SIG,\glslongpluralkey=Sistemas de Información Geográfica]{SIG}{SIG}{Sistema de Información Geográfica}
+\newacronym{XHTML}{XHTML}{eXtensible HyperText Markup Language}
+\newacronym{ISO}{ISO}{International Organization for Standardization}
+\newacronym{XML}{XML}{Extensible Markup Language}
+\newacronym{UTC}{UTC}{Universal Coordinated Time}
+\newacronym{API}{API}{Application Programming Interface}
+\newacronym{ROI}{ROI}{Return On Investment}
+\newacronym{IDE}{IDE}{Integrated Development Environment}
+\newacronym{GUI}{GUI}{Graphical User Interface}
+\newacronym{OGC}{OGC}{Open Geospatial Consortium}
+\newacronym{GFDL}{GFDL}{GNU Free Document License}
+\newacronym{GPL}{GPL}{GNU General Public License}
+\newacronym{DDD}{DDD}{Domain Driven Design}
+\newacronym{DGD}{DGD}{Diseño Guiado por el Dominio}
+\newacronym{MVC}{MVC}{Modelo-Vista-Controlador}
+\newacronym{DOM}{DOM}{Document Object Model}
+\newacronym{SGBD}{SGBD}{Sistema Gestor de Base de Datos}
+\newacronym{RDBMS}{RDBMS}{Relational Database Management System}
+\newacronym{PDF}{PDF}{Portable Document Format}
+\newacronym{SCM}{SCM}{Source Code Management}
+\newacronym{MVP}{MVP}{Model-View-Presenter}
+\newacronym{ORM}{ORM}{Object Relational Mapper}
+\newacronym{SQL}{SQL}{Structured Query Language}
+\newacronym{JSON}{JSON}{JavaScript Object Notation}
+\newacronym{URL}{URL}{Uniform Resource Locator}
+\newacronym{HTTP}{HTTP}{Hypertext Transfer Protocol}
+\newacronym{HTTPS}{HTTPS}{Hypertext Transfer Protocol Secure}
+\newacronym{AJAX}{AJAX}{Asynchronous JavaScript And XML}
+
+
+%
+% Glosario
+%
+
+\newglossaryentry{scm}{
+  name={SCM},
+  description={acrónimo en inglés de \textit{Source Code Management}, herramienta para gestionar el código fuente, permitiendo
+  a los desarrolladores trabajar con distintas versiones, juntar ramas, aplicar parches, etc. Git es la herramienta de este
+  tipo más usada en este momento.}
+}
+\newglossaryentry{iteracion}{
+  name={iteración},
+  plural={iteraciones},
+  description={en las Metodogías Ágiles es una unidad de tiempo en la que se desarrollan las funcionalidades acordadas. También
+  conoce como \textit{Sprint} en la terminología Scrum. Típicamente se corresponde con dos semanas de desarrollo, pero esto
+  depende del proyecto. Cada iteración del ciclo de vida incluye normalmente diseño, codificación, pruebas y documentación.}
+}
+\newglossaryentry{Scrum Master} {
+  name={\textit{Scrum Master}},
+  description={uno de los roles principales en Scrum es el \textit{Scrum Master}, que mantiene los procesos y trabaja de forma 
+  similar al director de proyecto, el \textit{Product Owner}, que representa a los usuarios/clientes, y el Equipo que incluye 
+  a los desarrolladores.}
+}
+\newglossaryentry{scrum}{
+  name=scrum,
+  description={modelo de desarrollo ágil caracterizado por: desarrollo incremental, la calidad del resultado más en el 
+  conocimiento tácito de las personas en equipos autoorganizados y solapamiento de las diferentes fases del desarrollo.}
+}
+\newglossaryentry{kanban}{
+  name=kanban,
+  description={método para gestionar el trabajo, con énfasis en la entrega justo a tiempo, mientras no se sobrecargan a 
+  los miembros del equipo. En este enfoque, el proceso, desde la definición de una tarea hasta su entrega al cliente, 
+  se muestra para que los participantes lo vean y los miembros del equipo tomen el trabajo de una cola.}
+}
+\newglossaryentry{Scrum-Ban}{
+  name={Scrum-Ban},
+  description={método de desarrollo que emplea Kanban para la planificación de tareas en cada iteración y Scrum para 
+  la planificación de las iteraciones, combinando ambas metodogías en un mismo ciclo de desarrollo.}
+}
+\newglossaryentry{metodologia agil} {
+  name={metodología ágil},
+  plural={metodogías ágiles},
+  description={método de ingeniería del software basado en el desarrollo iterativo e incremental, donde los requisitos y 
+  soluciones evolucionan mediante la colaboración de grupos auto organizados y multidisciplinarios.}
+}
+\newglossaryentry{ddd} {
+  name={Diseño Guiado por el Dominio},
+  description={o \textit{Domain Driven Design} (DDD) es un enfoque para el desarrollo de software con necesidades complejas mediante 
+  una profunda conexión entre la implementación y los conceptos del modelo y núcleo del negocio.}
+}
+\newglossaryentry{arquitectura en capas}{
+  name={arquitectura en capas},
+  description={modelo cliente-servidor en el que el objetivo primordial es la separación de la lógica de negocios de 
+  la lógica de diseño; un ejemplo básico de esto consiste en separar la capa de datos de la capa de presentación al usuario.}
+}
+\newglossaryentry{api} {
+  name={API},
+  description={acrónico de \textit{Application Programming Interface}, conjunto de funciones y procedimientos (o métodos, 
+  en la programación orientada a objetos) que ofrece cierta librería para ser utilizada por otro programa}
+}
+\newglossaryentry{I18N}{
+  name={I18N},
+  description={abreviación del término ingles \textit{internationalization} con el numerónimo "i18n". Ello se debe a que 
+  entre la primera i y la última ene de dicha palabra hay 18 letras.}
+}
+\newglossaryentry{http}{
+  name={HTTP},
+  description={acrónimo de \textit{Hypertext Transfer Protocol} (en español protocolo de transferencia de hipertexto) es el 
+  protocolo usado en cada transacción de la World Wide Web. HTTP define la sintaxis y la semántica que utilizan los elementos 
+  de software de la arquitectura web (clientes, servidores, proxies) para comunicarse. Es un protocolo orientado a transacciones 
+  y sigue el esquema petición-respuesta entre un cliente y un servidor. HTTPS es la versión segura del protocolo usando una
+  capa de cifrado SSL/TLS.}
+}
+\newglossaryentry{dom}{
+  name={DOM},
+  description={\textit{Document Object Model} (Modelo de Objetos del Documento), una API que proporciona un conjunto estándar 
+  de métodos para representar documentos HTML y XML.}
+}
+\newglossaryentry{xhtml} {
+  name={XHTML},
+  description={del inglés \textit{eXtensible HyperText Markup Language}, XHTML es básicamente HTML expresado como XML válido.}
+}
+\newglossaryentry{plugin} {
+  name={\textit{plugin}},
+  description={funcionalidad nueva y generalmente específica, que es añadida y ejecutada por la aplicación principal 
+  interactúando por medio de una API.}
+}
