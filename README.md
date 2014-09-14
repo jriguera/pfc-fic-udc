@@ -24,7 +24,7 @@ useful to use it in a standard _Makefile_. _aspell_ is an optional package
 for spelling checks.
 
 
-# Structure:
+# Soure tex structure (`src`):
 
 The main document where the most important variables or macros are defined 
 is _pfc.tex_. The style, dependencies and other macros are defined in _pfc.sty_, 
@@ -35,6 +35,12 @@ that is, the mandatory parts of the book: cover, thanks, table of contents,
 glossary, bibliography, etc.
 
 The rest of the tex files are the chapters of the report.
+
+If you want to define glosary or acronym entries, you have to edit the file 
+`pfc.glossary`, the same applies for the bibliography using the file `pfc.bib`.
+
+The default folder to include all the pictures is `images`.
+
 
 # Use
 
@@ -65,6 +71,9 @@ Latexmk: Log file says output to 'pfc.pdf'
 Latexmk: Found bibliography file(s) [pfc.bib]
 Latexmk: All targets (pfc.pdf) are up-to-date
 ```
+
+You can have a look to the example pdf file `pfc.pdf`.
+
 
 ## Spelling
 

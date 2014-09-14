@@ -7,3 +7,6 @@ texlive-science
 texlive-pictures
 texlive-lang-spanish
 latexmk
+aspell
+aspell-es
+make
