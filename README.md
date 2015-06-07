@@ -1,5 +1,8 @@
-pfc-udc
-=======
+pfc-fic-udc
+===========
+
+Plantilla latex para el Proyecto Fin de Carrera de la Facultad de
+Informática de la Universidad de A Coruña.
 
 Standard LaTeX template for final degree report/book project in FIC, 
 (Facultad de Informática) at UDC (Universidad de A Coruña)
